@@ -1,0 +1,17 @@
+.navbar-brand{
+    font-size: 45px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.nav-link{
+    font-size: 18px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.blockquote{
+    color:aliceblue;
+    padding-top: 20%;
+    font-size:xx-large;
+    font-style: italic;
+}
+body{
+    background: url('../images/bg-image.jpg');
+}
