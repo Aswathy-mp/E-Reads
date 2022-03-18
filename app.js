@@ -12,21 +12,25 @@ const nav=[
     },
     {
         link:'/addauthor',name:'Add Author'
-    },
-    {
-        link:'/login',name:'Log In'
-    },
-    {
-        link:'/signup',name:'Sign Up'
     }
+]
+
+const nav1=[
+        {
+            link:'/login',name:'Log In'
+        },
+        {
+            link:'/signup',name:'Sign Up'
+        } 
 ]
 
 const booksRouter=require('./src/routes/bookRoutes')(nav);
 const authorRouter=require('./src/routes/authorRoutes')(nav);
 const addbookRouter=require('./src/routes/addbookRoutes')(nav);
 const addauthorRouter=require('./src/routes/addauthorRoutes')(nav);
-const loginRouter=require('./src/routes/loginRoutes')(nav);
-const signupRouter=require('./src/routes/signupRoutes')(nav);
+const loginRouter=require('./src/routes/loginRoutes')(nav1);
+const signupRouter=require('./src/routes/signupRoutes')(nav1);
+const indexRouter=require('./src/routes/indexRoutes')(nav);
 
 app.use(express.urlencoded({extended:true}));
 app.use(express.static('public'));
@@ -38,10 +42,11 @@ app.use('/addbook',addbookRouter);
 app.use('/addauthor',addauthorRouter);
 app.use('/login',loginRouter);
 app.use('/signup',signupRouter);
+app.use('/index1',indexRouter);
 
 app.get('/',function(req,res){
     res.render('index',{
-        nav
+        nav1
     });
 });
 

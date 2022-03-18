@@ -5,19 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/addbook.css">
+    <link rel="stylesheet" href="css/login.css">
     <title>Log In</title>
     
 </head>
 <body >
     <!-- navbar starts here -->
-    <nav class="navbar navbar-expand-lg navbar-light sticky-top pt-4 pb-4">
-        <a class="navbar-brand" href="/">E-Reads</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent sticky-top pt-4 pb-4">
+        <a class="navbar-brand" href="">E-Reads</a>
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
            
-            <%for(i=0;i<nav.length;i++){%>
+            <%for(i=0;i<nav1.length;i++){%>
               <li class="nav-item">
-                <a class="nav-link " href="<%=nav[i].link%>"><%=nav[i].name%></a>
+                <a class="nav-link " href="<%=nav1[i].link%>"><%=nav1[i].name%></a>
               </li>
               <%}%>
           </ul>
@@ -36,7 +36,7 @@
             Email-Id:  <input type="text" name="email" id="email" class="form-control"  placeholder="E-mail">
             <label id="emailtext"></label>
             <br>
-            password:<input type="text" name="password" id="pwd" class="form-control" placeholder="Password">
+            password:<input type="password" name="password" id="pwd" class="form-control" placeholder="Password">
             <label id="pwdtext"></label>
             <br>
            
@@ -51,14 +51,14 @@
         <div class="container" id="footer">
             <div class="row">
               <div class="col">
-                    <h1>Follow Us</h1>
+                    <h1 style="color: whitesmoke;">Follow Us</h1>
                     <div class="btn-group">
                         <a class="btn btn-twitter btn-lg" href="#"><i class="icon-twitter icon-large"></i> Twitter</a>
                         <a class="btn btn-facebook btn-lg" href="#"><i class="icon-facebook icon-large"></i> Facebook</a>
                         <a class="btn btn-google-plus btn-lg" href="#"><i class="icon-google-plus icon-large"></i> Google+</a>
                      
                     </div> 
-                    <p >All rights reserved © E-Reads 2022. </p>
+                    <p style="color: whitesmoke;" >All rights reserved © E-Reads 2022. </p>
               </div>
             </div>
           </div>

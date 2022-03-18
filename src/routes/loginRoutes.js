@@ -3,10 +3,10 @@ const loginRouter=express.Router();
 const Signupdata=require('../model/Signupdata');
 
 
-function router(nav){
+function router(nav1){
     loginRouter.get('/',function(req,res){
         res.render('login',{
-            nav
+            nav1
         })
     })
 
@@ -36,7 +36,7 @@ function router(nav){
              }
              console.log(flag);
              if(flag==true){
-                 res.redirect('/');
+                 res.redirect('/index1');
              }
              else{
                  res.redirect('/signup');

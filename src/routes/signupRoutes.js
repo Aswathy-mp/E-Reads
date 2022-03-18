@@ -2,10 +2,10 @@ const express=require('express');
 const signupRouter=express.Router();
 const Signupdata=require('../model/Signupdata');
 
-function router(nav){
+function router(nav1){
     signupRouter.get('/',function(req,res){
         res.render('signup',{
-            nav
+            nav1
         })
     })
     
