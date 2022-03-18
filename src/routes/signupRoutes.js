@@ -18,7 +18,7 @@ function router(nav){
                 }
                var newsignup=Signupdata(item);
                 newsignup.save();//saving to database
-                res.redirect('/');
+                res.redirect('/login');
     });
     return signupRouter;
 }

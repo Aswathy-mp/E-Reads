@@ -31,8 +31,10 @@
       <div class="border">
           <h3 class="text-center">Add a new Author</h3>
           <hr>
-        <form method="POST" action="/addauthor/add" >
+        <form method="POST" action="/addauthor/add" enctype="multipart/form-data" >
             Author:<input type="text" name="author" id="author" class="form-control" placeholder="Author" required>
+            <br>
+            Famous Works:<input type="text" name="works" id="author" class="form-control" placeholder="Famous Works" required>
             <br>
             Genre:<input type="text" name="genre" id="genre" class="form-control" placeholder="Genre" required>
             <br>

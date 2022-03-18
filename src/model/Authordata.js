@@ -11,6 +11,7 @@ const AuthorSchema=new Schema({
     author:String,
     about:String,
     genre:String,
+    works:String,
     image:String
 });
 
