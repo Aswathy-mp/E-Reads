@@ -2,8 +2,7 @@
 const mongoose=require('mongoose');
 
 // Database Connection
-mongoose.connect('mongodb://localhost:27017/EReads');
-// mongoose.connect('mongodb+srv://aswathy:aswathy@fsd-training.ou3ia.mongodb.net/Libraryapp?retryWrites=true&w=majority');
+mongoose.connect('mongodb+srv://Ereads:Ereads@fsd-training.ou3ia.mongodb.net/E-Reads?retryWrites=true&w=majority');
 
 // Schema defnition
 const Schema=mongoose.Schema;
