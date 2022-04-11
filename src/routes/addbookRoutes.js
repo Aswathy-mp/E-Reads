@@ -17,7 +17,7 @@ addbookRouter.use(multer({storage:imageStore}).single('image'));
 
 function router(nav){
     addbookRouter.get('/',function(req,res){
-        res.render('addBook',{
+        res.render('addbook',{
             nav
         })
     })
