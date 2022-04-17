@@ -24,11 +24,6 @@ function router(nav1){
                     flag=true;
                     break;
                  }
-                 else if(logindata.user=='admin@gmail.com'&&logindata.pwd=='Asdf1234'){
-                     console.log('admin login');
-                     flag=true;
-                    break;
-                 }
                  else
                  {
                     flag=false
