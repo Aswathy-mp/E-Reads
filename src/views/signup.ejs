@@ -26,13 +26,14 @@
           </form> 
       </nav>
 
-      
+      <!--  -->
       <!-- content starts here -->
       <div class="border">
           <h3 class="text-center">Sign Up</h3>
           <hr>
-        <form method="POST" action="/signup/add" onsubmit="Validate();">
+        <form method="POST" action="/signup/add" onsubmit="return Validate();">
             Name:  <input type="text" name="user" id="user" class="form-control"  placeholder="Enter Your name" required>
+            <label id="usertext" ></label>
             <br>
             Email-Id:  <input type="text" name="email" id="email" class="form-control"  placeholder="E-mail" required>
             <label id="emailtext"></label>
@@ -69,14 +70,26 @@
       </footer>
       <script>
 
+            user=document.getElementById('user')
             email=document.getElementById('email');
             emailtext=document.getElementById('emailtext');
             pwd=document.getElementById('pwd');
             confirmpwd=document.getElementById('confirmpwd')
             confirmtext=document.getElementById('confirmtext');
+            user.addEventListener('input',nameValidate);
             email.addEventListener('input',emailValidate);
             pwd.addEventListener('input',pwdValidate);
             confirmpwd.addEventListener('input',confirmValidate);
+
+            function nameValidate(){
+              let exp=/^([A-Za-z]+)([ ]?)([A-Za-z]+)([ ]?)([A-Za-z]+)$/;
+              if(exp.test(user.value)){
+                 return true;
+              }
+              else{
+                return false;
+              }
+            }
 
             function emailValidate(){
               let exp=/^([A-Za-z0-9\-.$_,!#%^&*:;]{3,})@([A-Za-z0-9\-]+).([a-z]{2,3})(.[a-z]{2,3})$/;
@@ -95,7 +108,7 @@
             function pwdValidate(){
                 let exp=/(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})/;
                     if(exp.test(pwd.value)){
-                    // console.log("Valid");
+                    console.log("Valid");
                         pwdtext.innerHTML="Valid Password";
                         pwdtext.style.color="Green";
                         return true;
@@ -121,18 +134,16 @@
                 }
 
                 function Validate(){
-              if(emailValidate()&&pwdValidate()&&confirmValidate()){
-                //   alert("fyn")
+              if(nameValidate()&&emailValidate()&&pwdValidate()&&confirmValidate()){
+                
                 return true;
               }
               else{
                 alert("Invalid Credentials");
+                
                 return false;
               }
             }
-
-
-
       </script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>

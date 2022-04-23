@@ -17,6 +17,7 @@ function router(nav1){
                     password:req.body.password,
                 }
                var newsignup=Signupdata(item);
+               
                 newsignup.save();//saving to database
                 res.redirect('/login');
     });
